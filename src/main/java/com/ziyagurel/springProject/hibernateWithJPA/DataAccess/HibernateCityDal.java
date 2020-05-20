@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
-import javax.websocket.Session;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ziyagurel.springProject.hibernateWithJPA.Entites.City;
@@ -23,7 +23,7 @@ public class HibernateCityDal implements ICityDal{
 	@Transactional
 	public List<City> getAll() {
 		Session session = entity.unwrap(Session.class);
-		List<City> cities = entity.createQuery("from city", City.class).getResultList();
+		List<City> cities = session.createQuery("from city", City.class).getResultList();
 		return cities;
 	}
 
