@@ -1,4 +1,4 @@
-package com.ziyagurel.springProject.Entities;
+package com.ziyagurel.springProject.hibernateWithJPA.Entites;
 
 import javax.persistence.*;
 
