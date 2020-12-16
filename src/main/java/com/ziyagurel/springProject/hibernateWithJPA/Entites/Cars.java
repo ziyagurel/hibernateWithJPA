@@ -5,4 +5,5 @@ public class Cars {
     private String plaka;
     private String marka;
     private String model;
+
 }
